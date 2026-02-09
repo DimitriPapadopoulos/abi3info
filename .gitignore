@@ -5,3 +5,6 @@ html/
 dist/
 env/
 __pycache__
+
+# test coverage
+.coverage

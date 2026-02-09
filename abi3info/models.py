@@ -183,8 +183,19 @@ class PartialStruct:
     """
 
     name: str
+    """
+    The struct's name.
+    """
+
     added: PyVersion
+    """
+    When this struct was added to the limited API.
+    """
+
     members: list[str]
+    """
+    The list of struct members that are guaranteed not to change.
+    """
 
 
 @dataclass(frozen=True)
@@ -196,7 +207,14 @@ class FullStruct:
     """
 
     name: str
+    """
+    The struct's name.
+    """
+
     added: PyVersion
+    """
+    When this struct was added to the limited API.
+    """
 
 
 Struct = OpaqueStruct | PartialStruct | FullStruct
